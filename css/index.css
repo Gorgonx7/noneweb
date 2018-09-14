@@ -8,23 +8,26 @@
 	background-image: url("../img/logo.png");
 	background-repeat: no-repeat;
 	background-size:contain;
+	box-shadow: 5px 0px 0px 0px rgba(0,0,0,0.2);
 	
 }
 body {
     font-family: "Lato", sans-serif;
+	background-color: lavender;
 }
 
 /* Fixed sidenav, full height */
 .sidenav {
     height: 100%;
     width: 200px;
-    position:fixed;
+    position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: lavender;
     overflow-x: hidden;
     padding-top: 0px;
+	box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.2);
 }
 
 /* Style the sidenav links and the dropdown button */
@@ -40,7 +43,9 @@ body {
     text-align: left;
     cursor: pointer;
     outline: none;
-	
+	border-top: 2px;
+	border-bottom: 2px;
+	border-color: plum;
 	
 }
 
@@ -49,12 +54,13 @@ body {
     color: #f1f1f1;
 	padding-left: 30px;
 	
+	
 }
 .nav-container{
 	width: 400px;
 	
 	
-	position: fixed;
+	position: absolute;
 	display: block;
 }
 
@@ -76,27 +82,41 @@ body {
 }
 .top-bar{
 	width: 100%;
-	height: 200px;
+	height: 400px;
 	display: inline-block;
-	position: fixed;
-	top:0;
-	left: 200px;
-	background-color: rebeccapurple;
+	position: absolute;
+	top:0%;
+	left: 10%;
+	background-image: url(../img/banner.jpg);
+	background-position: center;
 }
-.content{
-	position:fixed;
-	top: 200px;
-	left: 200px;
-	display: block;
-	width:50%;
+.content-left{
+	position: absolute;
+	top: 400px;
+	left: 10%;
+	display: inline-block;
+	width:25%;
 	height: 100%;
+	background-color: lavender;
+	
+	
+}
+.content-right{
+	position: absolute;
+	top: 400px;
+	left: 600px;
+	display: inline-block;
+	width:25%;
+	height: 100%;
+	background-color: lavender;
+	
 	
 }
 .title{
 	text-align: center;
 	
 }
-.header{
+.cell-header{
 	display: block;
 	text-align: center;
 	background-color: rebeccapurple;
@@ -106,21 +126,37 @@ body {
 	
 }
 
-.header h3 {
+.cell-header h3 {
 	text-transform: capitalize;
 	color: white;
 }
-.footer{
+.cell-content{
 	display: block;
 	text-align: center;
 	background-color: lightgray;
+	padding: 5px 5px 5px 5px;
+}
+.cell-footer{
+	display: block;
+	text-align: right;
+	background-color: rebeccapurple;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	padding: 10px 10px 10px 10px;
 }
 .cell{
 	position: relative;
 	display: inline-block;
 	width: 350px;
-	padding-top: 20px;
-	padding-left: 20px;
+	padding-top: 0px;
+	padding-left: 0px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+.cell{
+	box-shadow: 1px 2px 5px 1px #888888;
 }
 
 
@@ -132,7 +168,13 @@ body {
 .dropdown-btn{
 	display: inline-block;
 }
-
+.cell-holder{
+	display: inline-flex;
+	
+	vertical-align: top;
+	padding-top: 20px;
+	padding-left: 20px;
+}
 /* Main content */
 .main {
     margin-left: 200px; /* Same as the width of the sidenav */
@@ -141,7 +183,15 @@ body {
 }
 
 
-
+.news-container{
+	background-color: aqua;
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	left: 1000px;
+	top: 400px;
+	position: absolute;
+}
 
 /* Optional: Style the caret down icon */
 .fa-caret-right {
